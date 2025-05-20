@@ -12,13 +12,13 @@ dependencies {
     implementation(platform(project(":versions"))) //das zeigt keinen compile error mehr, danke
 
     implementation(myLibs.slf4j.api) // das geht logischerweise
-//    implementation(myLibs.slf4j.simple)  // das auch
+    implementation(myLibs.slf4j.simple)  // das auch
 
     // ich würde erwarten, dass das hier gleichwertig geht, denn platform ist ja eingebunden und kann eine Version bereitstellen
     // das würde dann für die Projekte, die platform benutzen kein Refactoring auf die Aliase (wie oben) bedeuten
-     implementation("org.slf4j:slf4j-simple")
+    // implementation("org.slf4j:slf4j-simple")
 
-    // ich würde erwarten, dass das hier entweder auf 1.7.36 heruntergesetzt wird oder es zu einer Fehlermeldung kommt
+    // mit stricly wird das hier unterbunden, ist die Frage, ob das Sinn macht
     // implementation("org.slf4j:slf4j-simple:2.0.17")  //
 
     implementation("org.apache.commons:commons-text")
